@@ -4,6 +4,7 @@ export function useOutsideClick(close, ref) {
     useEffect(
         function () {
             function handleClick(e) {
+                // e .stopPropagation();
                 if (ref.current && !ref.current.contains(e.target)) {
                     close();
                 }
